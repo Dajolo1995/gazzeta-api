@@ -13,4 +13,6 @@ router.put('/activate',auth.verifySistema, usuarioController.activate);
 router.put('/deactivate',auth.verifySistema, usuarioController.deactivate);
 router.post('/login',usuarioController.login);
 
+router.get('/prueba', usuarioController.prueba)
+
 export default router;

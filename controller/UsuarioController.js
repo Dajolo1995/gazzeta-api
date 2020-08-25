@@ -14,6 +14,18 @@ export default {
             next(e);
         }
     },
+
+    prueba: async(req, res)=>{
+        try {
+            const resp = await models.Usuario.find();
+            return res.status(200).send(resp)
+        } catch (error) {
+            console.error(error)
+            return res.status(500).send(error)
+        }
+        
+    },
+
     query: async (req,res,next) => {
         try {
             const reg=await models.Usuario.findOne({_id:req.query._id});

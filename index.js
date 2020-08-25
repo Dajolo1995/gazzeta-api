@@ -10,7 +10,7 @@ import router from './routes';
 const history = require('connect-history-api-fallback');
 //Conexion a la base de datos
 mongoose.Promise=global.Promise;
-const dbUrl='mongodb://daniel:123456D@ds161210.mlab.com:61210/gazzeta';
+const dbUrl='mongodb://daniel2:123456D@ds161210.mlab.com:61210/gazzeta';
 mongoose.connect(dbUrl, {useCreateIndex:true, useNewUrlParser: true})
 .then(mongoose => console.log('conectando a la Bd puerto 27017'))
 .catch(err => console.log(err));
@@ -25,6 +25,8 @@ app.use(express.urlencoded({extended:true}))
 // app.use(express.static(path.join(__dirname,'\\public')))
 
 app.use('/api',router);
+
+
 // Middleware for serving '/dist' dir
 const staticFileMiddleware = express.static('dist');
 
@@ -39,7 +41,7 @@ app.use(history({
 // 2nd call for redirected requests
 app.use(staticFileMiddleware);
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 5001);
 
 app.listen(app.get('port'),()=>{
     console.log('Server On port ' + app.get('port'))
