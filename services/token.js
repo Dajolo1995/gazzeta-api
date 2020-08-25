@@ -19,6 +19,7 @@ async function checkToken(token){
     
 }
 
+
 module.exports = {
     encode: async (user) => {
         const token = jwt.sign({user},jwtconfig.clave,{expiresIn: '30d'});

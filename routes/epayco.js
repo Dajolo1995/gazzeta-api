@@ -1,5 +1,5 @@
 const routerx = require( 'express-promise-router');
-const {getPayment} = require( '../controller/ePaycoController');
+const {getPayment} = require( '../controller/epaycoController');
 
 // const upload = require( '../middlewares/upload');
 
