@@ -1,6 +1,6 @@
-import routerx from 'express-promise-router';
-import menorController from '../controller/MenorController';
-import auth from '../middlewares/auth'
+const routerx = require('express-promise-router');
+const menorController = require('../controller/MenorController');
+const auth = require('../middlewares/auth');
 
 const router=routerx();
 
@@ -12,4 +12,4 @@ router.delete('/remove',auth.verifyeditor,menorController.remove)
 router.put('/activate',auth.verifyeditor,menorController.activate)
 router.put('/deactivate',auth.verifyeditor,menorController.deactivate)
 
-export default router;
+module.exports = router;

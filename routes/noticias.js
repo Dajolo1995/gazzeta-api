@@ -1,7 +1,7 @@
-import routerx from 'express-promise-router';
-import noticiasController from '../controller/NoticiaController';
-import auth from '../middlewares/auth'
-import upload from '../middlewares/upload'
+const routerx = require('express-promise-router');
+const noticiasController = require('../controller/NoticiaController');
+const auth = require('../middlewares/auth');
+const upload = require('../middlewares/upload');
 
 const router=routerx();
 
@@ -14,4 +14,4 @@ router.put('/activate',auth.verifyeditor,noticiasController.activate)
 router.put('/deactivate',auth.verifyeditor,noticiasController.deactivate)
 router.get('/obtenerImagen', noticiasController.obtenerImagen);
 
-export default router;
+module.exports =  router;

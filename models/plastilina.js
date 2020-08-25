@@ -1,4 +1,5 @@
-import mongoose,{Schema} from 'mongoose';
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 // la niña emily
 
@@ -24,4 +25,4 @@ const plastilinaSchema = new Schema({
 
 const Plastilina = mongoose.model('plastilina',plastilinaSchema);
 
-export default Plastilina;
+module.exports = Plastilina;

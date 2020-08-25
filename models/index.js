@@ -1,20 +1,19 @@
-import Categoria from './categoria';
-import Noticias from './noticias';
-import Usuario from './usuario';
-import Persona from './personas';
-import Plastilina from './plastilina';
-import Editor from './editor';
-import Emily from './emily';
-import Bolita from './bolita';
-import Menor from './menor';
-import Ikkaros from './ikkaros';
-import Lita from './lita';
-import Memes from './memes'
-import Invitado from './invitado'
+const Categoria = require( './categoria');
+const Noticias = require( './noticias');
+const Usuario = require( './usuario');
+const Persona = require( './personas');
+const Plastilina = require( './plastilina');
+const Editor = require( './editor');
+const Emily = require( './emily');
+const Bolita = require( './bolita');
+const Menor = require( './menor');
+const Ikkaros = require( './ikkaros');
+const Lita = require( './lita');
+const Memes = require( './memes');
+const Invitado = require('./invitado');
 
 
-
-export default {
+module.exports = {
     Categoria,
     Noticias,
     Usuario,

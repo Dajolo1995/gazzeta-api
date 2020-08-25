@@ -1,4 +1,5 @@
-import mongoose,{Schema} from 'mongoose';
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const memesSchema = new Schema({
     categoria:{type:Schema.ObjectId, ref:'categoria'},
@@ -11,4 +12,4 @@ const memesSchema = new Schema({
 
 const Memes= mongoose.model('memes',memesSchema);
 
-export default Memes;
+module.exports = Memes;

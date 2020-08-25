@@ -1,6 +1,6 @@
-import routerx from 'express-promise-router';
-import ikkarosController from '../controller/IkkarosController';
-import auth from '../middlewares/auth'
+const routerx = require( 'express-promise-router');
+const ikkarosController = require( '../controller/IkkarosController');
+const auth = require( '../middlewares/auth');
 
 const router=routerx();
 
@@ -12,4 +12,4 @@ router.delete('/remove',auth.verifyeditor,ikkarosController.remove)
 router.put('/activate',auth.verifyeditor,ikkarosController.activate)
 router.put('/deactivate',auth.verifyeditor,ikkarosController.deactivate)
 
-export default router;
+module.exports =  router;

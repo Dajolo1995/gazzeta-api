@@ -1,4 +1,5 @@
-import mongoose, {Schema} from 'mongoose';
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 const personaSchema = new Schema({
     nombre: {type:String, maxlength:50, unique:true, required:true},
     telefono:{type: String, maxlength:20},
@@ -9,4 +10,4 @@ const personaSchema = new Schema({
 });
 
 const Persona = mongoose.model('persona', personaSchema);
-export default Persona;
+module.exports = Persona;

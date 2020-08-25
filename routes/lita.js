@@ -1,6 +1,6 @@
-import routerx from 'express-promise-router';
-import litaController from '../controller/LitaController';
-import auth from '../middlewares/auth'
+const routerx = require('express-promise-router');
+const litaController = require('../controller/LitaController');
+const auth = require('../middlewares/auth');
 
 const router=routerx();
 
@@ -12,4 +12,4 @@ router.delete('/remove',auth.verifyeditor,litaController.remove)
 router.put('/activate',auth.verifyeditor,litaController.activate)
 router.put('/deactivate',auth.verifyeditor,litaController.deactivate)
 
-export default router;
+module.exports =  router;

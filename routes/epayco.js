@@ -1,11 +1,11 @@
-import routerx from 'express-promise-router';
-import {getPayment} from '../controller/ePaycoController';
+const routerx = require( 'express-promise-router');
+const {getPayment} = require( '../controller/ePaycoController');
 
-// import upload from '../middlewares/upload'
+// const upload = require( '../middlewares/upload');
 
 const router=routerx();
 
 router.post('/donaciones', getPayment);
 
 
-export default router;
+module.exports =  router;

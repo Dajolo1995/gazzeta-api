@@ -1,18 +1,18 @@
-import routerx from 'express-promise-router';
-import categoriaRouter from './categoria';
-import noticiasRouter from './noticias';
-import usuarioRouter from './usuario';
-import personaRouter from './persona';
-import plastilinaRouter from './plastilina';
-import editorRouter from './editor';
-import emilyRouter from './emily';
-import epayco from './epayco';
-import bolitaRouter from './bolita';
-import menorRouter from './menor';
-import ikkarosRouter from './ikkaros';
-import litaRouter from './lita';
-import memesRouter from './memes';
-import invitadoRouter from './invitado';
+const routerx = require( 'express-promise-router');
+const categoriaRouter = require( './categoria');
+const noticiasRouter = require( './noticias');
+const usuarioRouter = require( './usuario');
+const personaRouter = require( './persona');
+const plastilinaRouter = require( './plastilina');
+const editorRouter = require( './editor');
+const emilyRouter = require( './emily');
+const epayco = require( './epayco');
+const bolitaRouter = require( './bolita');
+const menorRouter = require( './menor');
+const ikkarosRouter = require( './ikkaros');
+const litaRouter = require( './lita');
+const memesRouter = require( './memes');
+const invitadoRouter = require( './invitado');
 
 
 
@@ -35,4 +35,4 @@ router.use('/memes', memesRouter);
 router.use('/invitado', invitadoRouter);
 
 
-export default router;
+module.exports =  router;

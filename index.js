@@ -1,12 +1,12 @@
-//import express from 'express';
+//const express = require( 'express');
 const express=require('express');
-//import morgan from 'morgan';
+//const morgan = require( 'morgan');
 const morgan=require('morgan');
-//import cors from 'cors';
+//const cors = require( 'cors');
 const cors=require('cors')
 const path  = require('path');
-import mongoose from 'mongoose';
-import router from './routes';
+const mongoose = require( 'mongoose');
+const router = require( './routes');
 const history = require('connect-history-api-fallback');
 //Conexion a la base de datos
 mongoose.Promise=global.Promise;

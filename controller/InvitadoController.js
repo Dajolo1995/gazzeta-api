@@ -1,10 +1,9 @@
-import models from '../models';
-import fs from "fs"
-import path from 'path'
+const models = require('../models');
+const fs = require("fs");
+const path = require('path');
 
 
-
-export default {
+module.exports =  {
     add: async (req,res,next) =>{
         
         const invitado = JSON.parse(req.body.invitado);

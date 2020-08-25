@@ -1,6 +1,6 @@
-import routerx from 'express-promise-router';
-import personaController from '../controller/PersonaController';
-import auth from '../middlewares/auth'
+const routerx = require('express-promise-router');
+const personaController = require('../controller/PersonaController');
+const auth = require('../middlewares/auth');
 
 const router=routerx();
 
@@ -13,4 +13,4 @@ router.put('/activate',auth.verifySistema, personaController.activate);
 router.put('/deactivate',auth.verifySistema, personaController.deactivate);
 router.post('/login',personaController.login);
 
-export default router;
+module.exports =  router;

@@ -1,4 +1,5 @@
-import mongoose,{Schema} from 'mongoose';
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 // El hermano menor
 
@@ -16,4 +17,4 @@ const litaSchema = new Schema({
 
 const Lita = mongoose.model('lita', litaSchema);
 
-export default  Lita;
+module.exports =  Lita;

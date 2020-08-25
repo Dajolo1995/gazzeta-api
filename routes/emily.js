@@ -1,6 +1,6 @@
-import routerx from 'express-promise-router';
-import emilyController from '../controller/EmilyController';
-import auth from '../middlewares/auth'
+const routerx = require( 'express-promise-router');
+const emilyController = require( '../controller/EmilyController');
+const auth = require( '../middlewares/auth')
 
 const router=routerx();
 
@@ -12,4 +12,4 @@ router.delete('/remove',auth.verifyeditor,emilyController.remove)
 router.put('/activate',auth.verifyeditor,emilyController.activate)
 router.put('/deactivate',auth.verifyeditor,emilyController.deactivate)
 
-export default router;
+module.exports =  router;

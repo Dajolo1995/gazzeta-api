@@ -1,7 +1,7 @@
-import routerx from 'express-promise-router';
-import invitadoController from '../controller/InvitadoController';
-import auth from '../middlewares/auth'
-import upload from '../middlewares/upload'
+const routerx = require( 'express-promise-router');
+const invitadoController = require( '../controller/InvitadoController');
+const auth = require( '../middlewares/auth');
+const upload = require( '../middlewares/upload');
 
 const router=routerx();
 
@@ -14,4 +14,4 @@ router.put('/activate',auth.verifyeditor,invitadoController.activate)
 router.put('/deactivate',auth.verifyeditor,invitadoController.deactivate)
 router.get('/obtenerImagen', invitadoController.obtenerImagen);
 
-export default router;
+module.exports =  router;

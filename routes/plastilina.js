@@ -1,6 +1,6 @@
-import routerx from 'express-promise-router';
-import plastilinaController from '../controller/PlastilinaController';
-import auth from '../middlewares/auth'
+const routerx = require('express-promise-router');
+const plastilinaController = require('../controller/PlastilinaController');
+const auth = require('../middlewares/auth');
 
 const router=routerx();
 
@@ -12,4 +12,4 @@ router.delete('/remove',auth.verifyeditor,plastilinaController.remove)
 router.put('/activate',auth.verifyeditor,plastilinaController.activate)
 router.put('/deactivate',auth.verifyeditor,plastilinaController.deactivate)
 
-export default router;
+module.exports =  router;

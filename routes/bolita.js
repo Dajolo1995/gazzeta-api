@@ -1,7 +1,7 @@
-import routerx from 'express-promise-router';
-import bolitaController from '../controller/BolitaController';
-import auth from '../middlewares/auth'
-import upload from '../middlewares/upload'
+const routerx = require( 'express-promise-router')
+const bolitaController = require( '../controller/BolitaController')
+const auth = require( '../middlewares/auth')
+const upload = require( '../middlewares/upload')
 
 const router=routerx();
 
@@ -14,4 +14,4 @@ router.put('/activate',auth.verifyeditor,bolitaController.activate)
 router.put('/deactivate',auth.verifyeditor,bolitaController.deactivate)
 router.get('/obtenerImagen', bolitaController.obtenerImagen);
 
-export default router;
+module.exports = router;

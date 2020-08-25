@@ -1,4 +1,5 @@
-import mongoose,{Schema} from 'mongoose';
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 // El hermano menor
 
@@ -16,4 +17,4 @@ const menorSchema = new Schema({
 
 const Menor = mongoose.model('menor',menorSchema);
 
-export default Menor;
+module.exports = Menor;

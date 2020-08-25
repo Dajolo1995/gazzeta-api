@@ -1,4 +1,5 @@
-import mongoose,{Schema} from 'mongoose';
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const bolitaSchema = new Schema({
     categoria:{type:Schema.ObjectId, ref:'categoria'},
@@ -11,4 +12,4 @@ const bolitaSchema = new Schema({
 
 const Bolita = mongoose.model('bolita',bolitaSchema);
 
-export default Bolita;
+module.exports =  Bolita;

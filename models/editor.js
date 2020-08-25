@@ -1,4 +1,5 @@
-import mongoose,{Schema} from 'mongoose';
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const editorSchema = new Schema({
     categoria:{type:Schema.ObjectId, ref:'categoria'},
@@ -21,4 +22,4 @@ const editorSchema = new Schema({
 
 const Editor = mongoose.model('editor',editorSchema);
 
-export default Editor;
+module.exports =  Editor;

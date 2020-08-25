@@ -1,4 +1,5 @@
-import mongoose,{Schema} from 'mongoose';
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const emilylSchema = new Schema({
     categoria:{type:Schema.ObjectId, ref:'categoria'},
@@ -11,4 +12,4 @@ const emilylSchema = new Schema({
 
 const Emily = mongoose.model('emily',emilylSchema);
 
-export default Emily;
+module.exports = Emily;

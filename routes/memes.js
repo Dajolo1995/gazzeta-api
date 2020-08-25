@@ -1,7 +1,7 @@
-import routerx from 'express-promise-router';
-import memesController from '../controller/MemesController';
-import auth from '../middlewares/auth'
-import upload from '../middlewares/upload'
+const routerx = require('express-promise-router');
+const memesController = require('../controller/MemesController');
+const auth = require('../middlewares/auth');
+const upload = require('../middlewares/upload');
 
 const router=routerx();
 
@@ -14,4 +14,4 @@ router.put('/activate',auth.verifyeditor,memesController.activate)
 router.put('/deactivate',auth.verifyeditor,memesController.deactivate)
 router.get('/obtenerImagen', memesController.obtenerImagen);
 
-export default router;
+module.exports =  router;
