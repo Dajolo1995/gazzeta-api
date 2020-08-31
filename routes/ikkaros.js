@@ -5,7 +5,7 @@ const auth = require( '../middlewares/auth');
 const router=routerx();
 
 router.post('/add', ikkarosController.add);
-router.get('/query',auth.verifyeditor,ikkarosController.query);
+router.get('/query',ikkarosController.query);
 router.get('/list',ikkarosController.list);
 router.put('/update',auth.verifyeditor,ikkarosController.update);
 router.delete('/remove',auth.verifyeditor,ikkarosController.remove)

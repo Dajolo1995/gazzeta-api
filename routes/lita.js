@@ -5,7 +5,7 @@ const auth = require('../middlewares/auth');
 const router=routerx();
 
 router.post('/add', litaController.add);
-router.get('/query',auth.verifyeditor,litaController.query);
+router.get('/query',litaController.query);
 router.get('/list',litaController.list);
 router.put('/update',auth.verifyeditor,litaController.update);
 router.delete('/remove',auth.verifyeditor,litaController.remove)

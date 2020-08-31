@@ -5,7 +5,7 @@ const auth = require('../middlewares/auth');
 const router=routerx();
 
 router.post('/add', plastilinaController.add);
-router.get('/query',auth.verifyeditor,plastilinaController.query);
+router.get('/query',plastilinaController.query);
 router.get('/list',plastilinaController.list);
 router.put('/update',auth.verifyeditor,plastilinaController.update);
 router.delete('/remove',auth.verifyeditor,plastilinaController.remove)

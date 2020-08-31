@@ -12,7 +12,7 @@ module.exports =  {
         
         const body = {
             titulo: bolita.titulo, 
-            pagina: bolita.pagina, 
+            linkeo: bolita.pagina, 
             imagen: path
         }
         try {

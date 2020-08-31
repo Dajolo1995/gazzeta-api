@@ -5,7 +5,7 @@ const auth = require('../middlewares/auth');
 const router=routerx();
 
 router.post('/add', menorController.add);
-router.get('/query',auth.verifyeditor,menorController.query);
+router.get('/query',menorController.query);
 router.get('/list',menorController.list);
 router.put('/update',auth.verifyeditor,menorController.update);
 router.delete('/remove',auth.verifyeditor,menorController.remove)

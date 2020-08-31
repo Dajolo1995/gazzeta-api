@@ -5,7 +5,7 @@ const auth = require( '../middlewares/auth')
 const router=routerx();
 
 router.post('/add', emilyController.add);
-router.get('/query',auth.verifyeditor,emilyController.query);
+router.get('/query',emilyController.query);
 router.get('/list',emilyController.list);
 router.put('/update',auth.verifyeditor,emilyController.update);
 router.delete('/remove',auth.verifyeditor,emilyController.remove)

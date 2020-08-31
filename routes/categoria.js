@@ -6,7 +6,7 @@ const router=routerx();
 
 // router.post('/add',auth.verifySistema, categoriaController.add);
 router.post('/add', categoriaController.add);
-router.get('/query',auth.verifySistema,categoriaController.query);
+router.get('/query',categoriaController.query);
 //router.get('/list',auth.verifySistema, categoriaController.list);
 router.get('/list',categoriaController.list);
 router.put('/update',auth.verifySistema,categoriaController.update);

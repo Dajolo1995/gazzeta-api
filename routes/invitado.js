@@ -6,7 +6,7 @@ const upload = require( '../middlewares/upload');
 const router=routerx();
 
 router.post('/add', upload.uploadFile, invitadoController.add);
-router.get('/query',auth.verifyeditor,invitadoController.query);
+router.get('/query',invitadoController.query);
 router.get('/list',invitadoController.list);
 router.put('/update',auth.verifyeditor,invitadoController.update);
 router.delete('/remove',auth.verifyeditor,invitadoController.remove)

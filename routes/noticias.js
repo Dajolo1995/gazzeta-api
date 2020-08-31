@@ -6,7 +6,7 @@ const upload = require('../middlewares/upload');
 const router=routerx();
 
 router.post('/add' , upload.uploadFile, noticiasController.add);
-router.get('/query',auth.verifyeditor,noticiasController.query);
+router.get('/query',noticiasController.query);
 router.get('/list',noticiasController.list);
 router.put('/update',auth.verifyeditor,noticiasController.update);
 router.delete('/remove',auth.verifyeditor,noticiasController.remove)

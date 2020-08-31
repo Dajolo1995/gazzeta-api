@@ -5,7 +5,7 @@ const auth = require('../middlewares/auth');
 const router=routerx();
 
 router.post('/add',auth.verifySistema, personaController.add);
-router.get('/query',auth.verifySistema, personaController.query);
+router.get('/query', personaController.query);
 router.get('/list', auth.verifySistema, personaController.list);
 router.put('/update',auth.verifySistema,personaController.update);
 router.delete('/remove',auth.verifySistema, personaController.remove);
