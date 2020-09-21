@@ -16,6 +16,16 @@ const editorSchema = new Schema({
     parrafoNueve:{type: String},
     parrafoDiez:{type: String},
     parrafoOnce:{type: String},
+    parrafoDoce:{type: String},
+    parrafoTrece:{type: String},
+    parrafoCatorce:{type: String},
+    parrafoquince:{type: String},
+    parrafoDieciseis:{type: String},
+    parrafoDicisiete:{type: String},
+    parrafoDieciocho:{type: String},
+    parrafoNueve:{type: String},
+    parrafoDiez:{type: String},
+    parrafoOnce:{type: String},
     createdAt:{type: Date, default: Date.now}
 
 });
